@@ -13,6 +13,7 @@ import android.view.MenuItem;
 
 import com.example.administrator.testrxjava.crete.MyCreate;
 import com.example.administrator.testrxjava.crete.MyDefer;
+import com.example.administrator.testrxjava.crete.MyFrom;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.test_create).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDefer.test();
+                MyFrom.test();
             }
         });
     }
