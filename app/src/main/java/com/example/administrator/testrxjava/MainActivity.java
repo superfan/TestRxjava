@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.administrator.testrxjava.crete.MyCreate;
+import com.example.administrator.testrxjava.crete.MyDefer;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -44,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.test).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.test_create).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test15();
+                MyDefer.test();
             }
         });
     }
