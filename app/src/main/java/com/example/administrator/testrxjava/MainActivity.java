@@ -13,7 +13,13 @@ import android.view.MenuItem;
 
 import com.example.administrator.testrxjava.crete.MyCreate;
 import com.example.administrator.testrxjava.crete.MyDefer;
+import com.example.administrator.testrxjava.crete.MyEmptyNeverThrow;
 import com.example.administrator.testrxjava.crete.MyFrom;
+import com.example.administrator.testrxjava.crete.MyInterval;
+import com.example.administrator.testrxjava.crete.MyJust;
+import com.example.administrator.testrxjava.crete.MyRange;
+import com.example.administrator.testrxjava.crete.MyRepeat;
+import com.example.administrator.testrxjava.crete.MyTimer;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -51,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.test_create).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyFrom.test();
+                MyRepeat.test();
             }
         });
     }
