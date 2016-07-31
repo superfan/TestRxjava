@@ -19,7 +19,14 @@ import com.example.administrator.testrxjava.crete.MyInterval;
 import com.example.administrator.testrxjava.crete.MyJust;
 import com.example.administrator.testrxjava.crete.MyRange;
 import com.example.administrator.testrxjava.crete.MyRepeat;
+import com.example.administrator.testrxjava.crete.MyStart;
 import com.example.administrator.testrxjava.crete.MyTimer;
+import com.example.administrator.testrxjava.transforming.MyBuffer;
+import com.example.administrator.testrxjava.transforming.MyFlatMap;
+import com.example.administrator.testrxjava.transforming.MyGroupBy;
+import com.example.administrator.testrxjava.transforming.MyMap;
+import com.example.administrator.testrxjava.transforming.MyScan;
+import com.example.administrator.testrxjava.transforming.MyWindow;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -57,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.test_create).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyRepeat.test();
+                MyGroupBy.test();
             }
         });
     }
