@@ -10,6 +10,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func0;
 import rx.functions.Func1;
+import rx.functions.Func2;
 
 /**
  * Created by Administrator on 2016/7/30.
@@ -121,5 +122,35 @@ public class MyFlatMap {
                         Log.i(TAG, "flatMap Next:" + integer);
                     }
                 });
+    }
+
+    public static void test4() {
+        Observable.just(10, 20, 30)
+                .flatMap(new Func1<Integer, Observable<Integer>>() {
+                    @Override
+                    public Observable<Integer> call(Integer integer) {
+                        return Observable.just(123, 234, 567);
+                    }
+                }, new Func2<Integer, Integer, String>() {
+                    @Override
+                    public String call(Integer integer, Integer integer2) {
+                        return "[" + integer + ", " + integer2 + "]";
+                    }
+                }).subscribe(new Subscriber<String>() {
+            @Override
+            public void onCompleted() {
+                Log.i(TAG, "flatMap onCompleted");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Log.i(TAG, "flatMap onError:" + e.getMessage());
+            }
+
+            @Override
+            public void onNext(String s) {
+                Log.i(TAG, "flatMap Next:" + s);
+            }
+        });
     }
 }

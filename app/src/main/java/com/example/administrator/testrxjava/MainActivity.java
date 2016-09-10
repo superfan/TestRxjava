@@ -11,6 +11,14 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.administrator.testrxjava.aggregate.MyConcat;
+import com.example.administrator.testrxjava.aggregate.MyReduce;
+import com.example.administrator.testrxjava.combining.MyCombineLatest;
+import com.example.administrator.testrxjava.combining.MyJoin;
+import com.example.administrator.testrxjava.combining.MyMerge;
+import com.example.administrator.testrxjava.combining.MyStartWith;
+import com.example.administrator.testrxjava.combining.MySwitch;
+import com.example.administrator.testrxjava.combining.MyZip;
 import com.example.administrator.testrxjava.crete.MyCreate;
 import com.example.administrator.testrxjava.crete.MyDefer;
 import com.example.administrator.testrxjava.crete.MyEmptyNeverThrow;
@@ -21,12 +29,36 @@ import com.example.administrator.testrxjava.crete.MyRange;
 import com.example.administrator.testrxjava.crete.MyRepeat;
 import com.example.administrator.testrxjava.crete.MyStart;
 import com.example.administrator.testrxjava.crete.MyTimer;
+import com.example.administrator.testrxjava.error.MyCatch;
+import com.example.administrator.testrxjava.error.MyRetry;
+import com.example.administrator.testrxjava.filter.MyDebounce;
+import com.example.administrator.testrxjava.filter.MyDistinct;
+import com.example.administrator.testrxjava.filter.MyElementAt;
+import com.example.administrator.testrxjava.filter.MyFilter;
+import com.example.administrator.testrxjava.filter.MyFirst;
+import com.example.administrator.testrxjava.filter.MyIgnoreElements;
+import com.example.administrator.testrxjava.filter.MyLast;
+import com.example.administrator.testrxjava.filter.MySample;
+import com.example.administrator.testrxjava.filter.MySkip;
+import com.example.administrator.testrxjava.filter.MySkipLast;
+import com.example.administrator.testrxjava.filter.MyTake;
+import com.example.administrator.testrxjava.filter.MyTakeFirst;
+import com.example.administrator.testrxjava.filter.MyTakeLast;
+import com.example.administrator.testrxjava.other.MyPublish;
+import com.example.administrator.testrxjava.other.MyReplay;
 import com.example.administrator.testrxjava.transforming.MyBuffer;
 import com.example.administrator.testrxjava.transforming.MyFlatMap;
 import com.example.administrator.testrxjava.transforming.MyGroupBy;
 import com.example.administrator.testrxjava.transforming.MyMap;
 import com.example.administrator.testrxjava.transforming.MyScan;
 import com.example.administrator.testrxjava.transforming.MyWindow;
+import com.example.administrator.testrxjava.utility.MyDelay;
+import com.example.administrator.testrxjava.utility.MyDo;
+import com.example.administrator.testrxjava.utility.MyMeterialize;
+import com.example.administrator.testrxjava.utility.MyTimeInterval;
+import com.example.administrator.testrxjava.utility.MyTimeOut;
+import com.example.administrator.testrxjava.utility.MyTimeStamp;
+import com.example.administrator.testrxjava.utility.MyUsing;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -64,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.test_create).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyGroupBy.test();
+                MyReplay.test();
             }
         });
     }
